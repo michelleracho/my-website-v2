@@ -26,3 +26,5 @@ yarn-error.log*
 # temp files/folders
 /src/design
 /src/img
+/src/components/Header.js
+/src/components/Header.scss

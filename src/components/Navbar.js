@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navlink from './Navlink';
 import './Navbar.scss';
 import logoSm from '../img/svg/logo-sm.svg';
 import logoLg from '../img/svg/logo-lg.svg';
@@ -14,9 +15,7 @@ class Navbar extends Component {
     for (let link of this.props.links) {
       navLinks.push(
         <li key={link} className="Navbar__item">
-          <a className="Navbar__link" href={`#${link}`}>
-            {link}
-          </a>
+          <Navlink text={link} href={`#${link}`} />
         </li>
       );
     }
@@ -27,7 +26,7 @@ class Navbar extends Component {
     return (
       <nav className="Navbar">
         <div className="Navbar__logo-container">
-          <a className="Navbar__link" href="#home">
+          <a href="#home">
             <img className="Navbar__logo" src={logoSm} alt="logo" />
             <h3>Michelle Racho</h3>
           </a>

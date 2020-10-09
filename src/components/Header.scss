@@ -1,0 +1,61 @@
+@import 'variables.scss';
+
+.Header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  // margin: auto 15rem;
+  padding: 0 10rem;
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: $color-black;
+  background: url(../img/svg/header-bg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  // background-position: top -3rem right;
+  background-position: top -3rem right 5rem;
+
+  &__heading {
+    font-size: 9rem;
+    font-weight: 700;
+    transform: translateY(-50%);
+  }
+
+  &__sub-heading {
+    font-size: 3.13rem;
+    font-weight: 100;
+    color: $color-gray;
+    transform: translateY(-120%);
+  }
+
+  .cta {
+    padding: 1rem 2.5rem;
+    border-radius: 0.3rem;
+    background-color: $color-primary;
+    transition: background-color 0.2s;
+
+    &:link,
+    &:visited {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

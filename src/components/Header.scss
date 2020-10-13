@@ -1,25 +1,21 @@
 @import 'variables.scss';
 
 .Header {
+  // border: 1px solid tomato;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  // margin: auto 15rem;
-  padding: 0 10rem;
-  max-width: 1920px;
-  width: 100%;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  // left: 50%;
+  // transform: translateX(-50%);
 
   color: $color-black;
   background: url(../img/svg/header-bg.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  // background-position: top -3rem right;
-  background-position: top -3rem right 5rem;
+  background-position: top -3rem right;
 
   &__heading {
     font-size: 9rem;

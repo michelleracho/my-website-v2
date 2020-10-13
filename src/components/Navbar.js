@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navlink from './Navlink';
 import './Navbar.scss';
 import logoSm from '../img/svg/logo-sm.svg';
-import logoLg from '../img/svg/logo-lg.svg';
 
 class Navbar extends Component {
   static defaultProps = {

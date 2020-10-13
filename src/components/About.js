@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './About.scss';
 import aboutPhotoSq from '../img/mracho-photo v4.png';
-import aboutPhotoRect from '../img/mracho.jpg';
+// import aboutPhotoRect from '../img/mracho.jpg';
 
 class About extends Component {
   render() {
@@ -9,7 +9,7 @@ class About extends Component {
       <section className="About" id="about">
         <h1 className="section-title">About</h1>
         <figure className="About__photo-container">
-          <img src={aboutPhotoSq} alt="about photo" className="About__photo" />
+          <img src={aboutPhotoSq} alt="Michelle Racho" className="About__photo" />
         </figure>
         <div className="About__description">
           <p>

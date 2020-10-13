@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import './About.scss';
-import aboutPhoto from '../img/mracho-photo v4.png';
+import aboutPhotoSq from '../img/mracho-photo v4.png';
+import aboutPhotoRect from '../img/mracho.jpg';
 
 class About extends Component {
   render() {
     return (
       <section className="About" id="about">
         <h1 className="section-title">About</h1>
-        <div className="About__photo-container">
-          <img src={aboutPhoto} alt="about photo" className="About__photo" />
-        </div>
+        <figure className="About__photo-container">
+          <img src={aboutPhotoSq} alt="about photo" className="About__photo" />
+        </figure>
         <div className="About__description">
           <p>
-            My name is <span class="highlight">Michelle Angela Racho</span> and I'm an aspiring
+            My name is <span className="highlight">Michelle Angela Racho</span> and I'm an aspiring
             frontend developer living in Evans, GA. I completed my Bachelor's degree in Computer
             Science at Augusta University and I am eager to start a career in web development.
           </p>

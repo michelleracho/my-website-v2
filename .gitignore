@@ -26,3 +26,23 @@ yarn-error.log*
 # temp files/folders
 /src/design
 /src/img
+/src/components/Contact.js
+/src/components/Contact.scss
+
+fontawesome
+<i class="fab fa-html5"></i>
+<i class="fab fa-css3-alt"></i>
+<i class="fab fa-js"></i>
+<i class="fab fa-react"></i>
+<i class="fab fa-node"></i>
+
+<i class="fab fa-git"></i>
+<i class="fab fa-github"></i>
+<i class="fab fa-npm"></i>
+<i class="fab fa-figma"></i>
+
+<i class="fab fa-adobe text-gradient"></i> ??
+
+<i class="fas fa-envelope-square"></i>
+<i class="fab fa-linkedin"></i>
+<i class="fab fa-twitter"></i>

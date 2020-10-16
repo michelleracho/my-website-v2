@@ -26,8 +26,8 @@ yarn-error.log*
 # temp files/folders
 /src/design
 /src/img
-/src/components/Contact.js
-/src/components/Contact.scss
+
+/src/components/helpers.js
 
 fontawesome
 <i class="fab fa-html5"></i>

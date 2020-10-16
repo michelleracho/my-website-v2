@@ -36,14 +36,13 @@ section {
   &::before {
     content: '';
     position: absolute;
-    background: url(./img/svg/asterisk.svg), rgba($color-primary, 0.9);
+    background: url(./img/svg/asterisk.svg), rgba($color-primary, 0.95);
     border-radius: 50%;
     background-size: cover;
-    width: 4.5rem; // 4rem
-    height: 4.5rem; // 4rem
+    width: 4.5rem;
+    height: 4.5rem;
     left: -50%;
     top: 0;
-    // transform: translateY(-50%);
   }
 }
 

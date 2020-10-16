@@ -27,7 +27,6 @@ yarn-error.log*
 /src/design
 /src/img
 
-/src/components/helpers.js
 
 fontawesome
 <i class="fab fa-html5"></i>

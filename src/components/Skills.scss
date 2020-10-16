@@ -3,6 +3,9 @@
 .Skills {
   section {
     padding-bottom: 3.5rem;
+
+    @include flexCenter;
+    flex-direction: column;
   }
 
   .section-title {
@@ -16,9 +19,10 @@
 
   &__list {
     list-style: none;
-    display: flex;
+    // margin-left: 2rem;
+
+    @include flexCenter;
     flex-wrap: wrap;
-    margin-left: 2rem;
   }
 
   &__item {

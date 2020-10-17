@@ -7,7 +7,7 @@ class About extends Component {
   render() {
     return (
       <section className="About" id="about">
-        <h1 className="section-title">About</h1>
+        <h2 className="section-title">About</h2>
         <figure className="About__photo-container">
           <img src={aboutPhotoSq} alt="Michelle Racho" className="About__photo" />
         </figure>

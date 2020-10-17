@@ -41,6 +41,7 @@ section {
     position: absolute;
     background: url(./img/svg/asterisk.svg), rgba($color-primary, 0.95);
     border-radius: 50%;
+    border: 0.5rem solid $color-primary;
     background-size: cover;
     width: 4.5rem;
     height: 4.5rem;

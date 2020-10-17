@@ -27,7 +27,6 @@ yarn-error.log*
 /src/design
 /src/img
 
-
 fontawesome
 <i class="fab fa-html5"></i>
 <i class="fab fa-css3-alt"></i>
@@ -40,7 +39,7 @@ fontawesome
 <i class="fab fa-npm"></i>
 <i class="fab fa-figma"></i>
 
-<i class="fab fa-adobe text-gradient"></i> ??
+<i class="fab fa-adobe"></i> ??
 
 <i class="fas fa-envelope-square"></i>
 <i class="fab fa-linkedin"></i>

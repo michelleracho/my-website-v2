@@ -28,7 +28,9 @@ class Skills extends Component {
   render() {
     return (
       <section className="Skills" id="skills">
-        <h2 className="section-title">Skills</h2>
+        <h2 className="section-title" data-title="Skills">
+          Skills
+        </h2>
 
         <section className="Skills__container">
           <h3 className="Skills__heading">Development</h3>

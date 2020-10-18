@@ -3,25 +3,26 @@ import { displayList } from './helpers';
 import './Skills.scss';
 
 class Skills extends Component {
+  // icons from fontawesome and devicon
   static defaultProps = {
     dev: [
-      { label: 'HTML', icon: 'devicon-html5-plain' },
-      { label: 'CSS', icon: 'devicon-css3-plain' },
-      { label: 'Sass', icon: 'devicon-sass-original' },
-      { label: 'JavaScript', icon: 'devicon-javascript-plain' },
-      { label: 'React', icon: 'devicon-react-original' },
-      { label: 'Node.js', icon: 'devicon-nodejs-plain' },
+      { label: 'HTML', icon: 'fab fa-html5' },
+      { label: 'CSS', icon: 'fab fa-css3' },
+      { label: 'Sass', icon: 'fab fa-sass' },
+      { label: 'JavaScript', icon: 'fab fa-js' },
+      { label: 'React', icon: 'fab fa-react' },
+      { label: 'Node.js', icon: 'fab fa-node' },
       { label: 'C#', icon: 'devicon-csharp-plain' },
       { label: '.NET', icon: 'devicon-dot-net-plain' }
     ],
     tools: [
       { label: 'VS Code', icon: 'devicon-visualstudio-plain' },
       { label: 'Visual Studio', icon: 'devicon-visualstudio-plain' },
-      { label: 'Git', icon: 'devicon-git-plain' },
-      { label: 'Github', icon: 'devicon-github-plain' },
-      { label: 'NPM', icon: 'devicon-npm-original-wordmark' },
-      { label: 'Adobe XD', icon: 'temp' },
-      { label: 'Figma', icon: 'temp' }
+      { label: 'Git', icon: 'fab fa-git-alt' },
+      { label: 'Github', icon: 'fab fa-github' },
+      { label: 'NPM', icon: 'fab fa-npm' },
+      { label: 'Adobe XD', icon: 'fab fa-adobe' },
+      { label: 'Figma', icon: 'fab fa-figma' }
     ]
   };
 
@@ -32,15 +33,15 @@ class Skills extends Component {
           Skills
         </h2>
 
-        <section className="Skills__container">
+        <div className="Skills__container">
           <h3 className="Skills__heading">Development</h3>
           <ul className="Skills__list">{displayList(this.props.dev, 'Skills')}</ul>
-        </section>
+          {/* </div>
 
-        <section className="Skills__container">
+        <div className="Skills__container"> */}
           <h3 className="Skills__heading">Tools</h3>
           <ul className="Skills__list">{displayList(this.props.tools, 'Skills')}</ul>
-        </section>
+        </div>
       </section>
     );
   }

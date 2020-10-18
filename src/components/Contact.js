@@ -5,17 +5,21 @@ import './Contact.scss';
 class Contact extends Component {
   static defaultProps = {
     contact: [
-      { label: 'Email', link: 'michelleangela.racho@gmail.com', icon: 'temp' },
-      { label: 'Github', link: 'https://github.com/michelleracho', icon: 'devicon-github-plain' },
+      {
+        label: 'Email',
+        link: 'mailto:michelleangela.racho@gmail.com',
+        icon: 'fas fa-envelope-square'
+      },
+      { label: 'Github', link: 'https://github.com/michelleracho', icon: 'fab fa-github' },
       {
         label: 'LinkedIn',
         link: 'https://www.linkedin.com/in/michelle-angela-racho/',
-        icon: 'devicon-linkedin-plain'
+        icon: 'fab fa-linkedin'
       },
       {
         label: 'Twitter',
         link: 'https://twitter.com/michelleracho_',
-        icon: 'devicon-twitter-plain'
+        icon: 'fab fa-twitter'
       }
     ]
   };
@@ -26,6 +30,7 @@ class Contact extends Component {
         <h2 className="section-title" data-title="Contact">
           Contact
         </h2>
+
         <ul className="Contact__list">{displayList(this.props.contact, 'Contact')}</ul>
       </section>
     );

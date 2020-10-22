@@ -10,7 +10,7 @@ class Header extends Component {
     this.svgRef = React.createRef(); // to access the SVG el in the render
   }
 
-  // add style to each svg path
+  // add style to each sub-header svg path
   // componentDidMount() {
   //   const path = document.getElementsByClassName('path');
 
@@ -22,7 +22,7 @@ class Header extends Component {
   //   }
   // }
 
-  // add style to each svg group
+  // add style to each header-bg svg group
   componentDidMount() {
     const bgGroup = document.getElementsByClassName('bg-group');
     console.log(bgGroup);

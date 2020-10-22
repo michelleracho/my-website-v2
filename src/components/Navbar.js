@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navlink from './Navlink';
 import './Navbar.scss';
-import logoSm from '../img/svg/logo-sm.svg';
+import logo from '../img/svg/logo.svg';
 
 class Navbar extends Component {
   static defaultProps = {
@@ -26,7 +26,7 @@ class Navbar extends Component {
       <nav className="Navbar">
         <div className="Navbar__logo-container">
           <a href="#home">
-            <img className="Navbar__logo" src={logoSm} alt="logo" />
+            <img className="Navbar__logo" src={logo} alt="logo" />
             <h3>Michelle Racho</h3>
           </a>
         </div>

@@ -1,42 +1,46 @@
 import React, { Component } from 'react';
 import './About.scss';
-import aboutPhotoSq from '../img/mracho-photo v4.png';
-// import aboutPhotoRect from '../img/mracho.jpg';
+import photoSquare from '../img/mracho-square.png';
+import photoRectangle from '../img/mracho-rectangle.jpg';
 
 class About extends Component {
   render() {
     return (
       <section className="About" id="about">
         <h2 className="section-title" data-title="About">
-          About
+          Get to know me
         </h2>
-        <figure className="About__photo-container">
-          <img src={aboutPhotoSq} alt="Michelle Racho" className="About__photo" />
-        </figure>
-        <div className="About__description">
-          <p>
-            My name is <span className="highlight">Michelle Angela Racho</span> and I'm an aspiring
-            frontend developer living in Evans, GA. I completed my Bachelor's degree in Computer
-            Science at Augusta University and I am eager to start a career in web development.
-          </p>
 
-          <p>
-            I am a growth-oriented team player that has strong attention to detail who also works
-            well independently and because of my previous role as an account manager, I have
-            developed strong customer service skills. I am a naturally curious and continuous
-            learner. I am passionate about learning new things and technologies that will expand my
-            knowledge within all aspects of Computer Science especially in web development.
-          </p>
+        <div className="About__container">
+          <picture className="About__photo-container">
+            <source srcset={photoRectangle} media="(max-width: 1100px)" />
+            <img className="About__photo" src={photoSquare} alt="" />
+          </picture>
 
-          <p>
-            My personal mission is to further my specialization in front-end development, work with
-            amazing people and help develop cool products. I am constantly pushing myself out of my
-            comfort zone to learn more and make my dreams come true.
-          </p>
+          <div className="About__description">
+            <p>
+              My name is <span className="highlight">Michelle Angela Racho</span> and I'm a
+              front-end focused web developer living in Evans, GA.
+            </p>
+            <p>
+              I am a growth-oriented team player that has strong attention to detail who also works
+              well independently and because of my previous role as an account manager, I have
+              developed strong customer service skills. I am passionate about learning new things
+              and technologies that will expand my knowledge within all aspects of Computer Science
+              especially in front-end development.
+            </p>
+            <p>
+              My personal mission is to further my specialization in front-end development, work
+              with amazing people to help develop cool products and one day be able to mentor new
+              developers. I am constantly pushing myself out of my comfort zone to learn more and
+              make these dreams a reality.
+            </p>
+
+            <a href="#" className="cta">
+              Resume
+            </a>
+          </div>
         </div>
-        <a href="#" className="cta">
-          Resume
-        </a>
       </section>
     );
   }

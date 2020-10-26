@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Project from './Project';
 import './ProjectsContainer.scss';
 import placeholderIcon from '../img/svg/icon.svg';
+import soundAppImg from '../img/projects/sound-app.png';
+import imageGalleryImg from '../img/projects/image-gallery.png';
 
 class ProjectsContainer extends Component {
   static defaultProps = {
@@ -9,9 +11,8 @@ class ProjectsContainer extends Component {
       {
         title: 'Portfolio Website',
         img: placeholderIcon,
-        description:
-          'I personally designed and developed this website with the goal of showcasing my skills as a developer.',
-        tech: ['HTML', 'Scss', 'React', 'Adobe XD'],
+        description: 'Designed and developed this website to showcase my skills as a developer.',
+        tech: ['HTML', 'Scss', 'React', 'React Router', 'Adobe XD'],
         previewUrl: 'https://www.michelleracho.com/',
         sourceUrl: 'https://github.com/michelleracho/my-website-v2'
       },
@@ -25,12 +26,19 @@ class ProjectsContainer extends Component {
       },
       {
         title: 'Sound App',
-        img: placeholderIcon,
-        description:
-          'A Patatap clone using JavaScript libraries; Paper.js for the animations and Howler.js for the sounds',
-        tech: ['HTML', 'CSS', 'JavaScript'],
+        img: soundAppImg,
+        description: 'A Patatap clone using JavaScript libraries',
+        tech: ['HTML', 'CSS', 'JavaScript', 'Paper.js', 'Howler.js'],
         previewUrl: 'https://awesome-brahmagupta-145126.netlify.app/',
         sourceUrl: 'https://github.com/michelleracho/sound-app'
+      },
+      {
+        title: 'Image Gallery',
+        img: imageGalleryImg,
+        description: 'Instagram profile page clone using CSS grid',
+        tech: ['HTML', 'Scss'],
+        previewUrl: 'https://dreamy-dubinsky-4414a3.netlify.app/',
+        sourceUrl: 'https://github.com/michelleracho/image-gallery'
       }
     ]
   };
@@ -53,7 +61,7 @@ class ProjectsContainer extends Component {
     return (
       <section className="ProjectsContainer" id="projects">
         <h2 className="section-title" data-title="Projects">
-          Projects
+          Things I worked on
         </h2>
 
         <ul className="ProjectsContainer__list">{projectList}</ul>

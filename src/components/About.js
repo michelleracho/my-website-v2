@@ -13,7 +13,7 @@ class About extends Component {
 
         <div className="About__container">
           <picture className="About__photo-container">
-            <source srcset={photoRectangle} media="(max-width: 1100px)" />
+            <source srcSet={photoRectangle} media="(max-width: 1100px)" />
             <img className="About__photo" src={photoSquare} alt="" />
           </picture>
 

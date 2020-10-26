@@ -25,12 +25,12 @@ class Header extends Component {
   // add style to each header-bg svg group
   componentDidMount() {
     const bgGroup = document.getElementsByClassName('bg-group');
-    console.log(bgGroup);
+    // console.log(bgGroup);
   }
 
   render() {
     return (
-      <header className="Header">
+      <header className="Header" id="home">
         <HeaderBg ref={this.svgRef} />
         {/* <SubHeader ref={this.svgRef} /> */}
 

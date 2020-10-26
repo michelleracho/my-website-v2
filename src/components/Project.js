@@ -13,6 +13,8 @@ class Project extends Component {
           <h3 className="Project__title">{this.props.title}</h3>
           <p className="Project__description">{this.props.description}</p>
 
+          <ul>{this.props.tech}</ul>
+
           <div className="Project__links">
             <a href={this.props.prevLink} target="_blank" className="cta">
               See Live

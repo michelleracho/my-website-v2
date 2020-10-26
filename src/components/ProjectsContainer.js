@@ -12,16 +12,16 @@ class ProjectsContainer extends Component {
         description:
           'I personally designed and developed this website with the goal of showcasing my skills as a developer.',
         tech: ['HTML', 'Scss', 'React', 'Adobe XD'],
-        prevLink: 'https://www.michelleracho.com/',
-        sourceLink: 'https://github.com/michelleracho/my-website-v2'
+        previewUrl: 'https://www.michelleracho.com/',
+        sourceUrl: 'https://github.com/michelleracho/my-website-v2'
       },
       {
         title: 'Todo List',
         img: placeholderIcon,
-        description: 'The classic project favorite',
+        description: 'The classic project favorite with the addition of utilizing local storage',
         tech: ['HTML', 'CSS', 'React'],
-        prevLink: '#',
-        sourceLink: 'https://github.com/michelleracho/react-todo-list'
+        previewUrl: '#',
+        sourceUrl: 'https://github.com/michelleracho/react-todo-list'
       },
       {
         title: 'Sound App',
@@ -29,26 +29,25 @@ class ProjectsContainer extends Component {
         description:
           'A Patatap clone using JavaScript libraries; Paper.js for the animations and Howler.js for the sounds',
         tech: ['HTML', 'CSS', 'JavaScript'],
-        prevLink: 'https://awesome-brahmagupta-145126.netlify.app/',
-        sourceLink: 'https://github.com/michelleracho/sound-app'
+        previewUrl: 'https://awesome-brahmagupta-145126.netlify.app/',
+        sourceUrl: 'https://github.com/michelleracho/sound-app'
       }
     ]
   };
 
   render() {
     const projectList = this.props.projects.map(proj => (
-      <li key={proj.name}>
-        <Project
-          title={proj.title}
-          img={proj.img}
-          description={proj.description}
-          tech={proj.tech.map(t => (
-            <li>{t}</li>
-          ))}
-          prevLink={proj.prevLink}
-          sourceLink={proj.sourceLink}
-        />
-      </li>
+      <Project
+        key={proj.title}
+        title={proj.title}
+        img={proj.img}
+        description={proj.description}
+        tech={proj.tech.map((t, idx) => (
+          <li key={idx}>{t}</li>
+        ))}
+        previewUrl={proj.previewUrl}
+        sourceUrl={proj.sourceUrl}
+      />
     ));
 
     return (

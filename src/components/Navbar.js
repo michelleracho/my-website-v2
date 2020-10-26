@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavHashLink, HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from './helpers';
 
 import './Navbar.scss';
 import logo from '../img/svg/logo.svg';
@@ -10,11 +11,11 @@ class Navbar extends Component {
   };
 
   render() {
-    const scrollWithOffset = el => {
-      const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-      const yOffset = -80;
-      window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
-    };
+    // const scrollWithOffset = el => {
+    //   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    //   const yOffset = -80;
+    //   window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+    // };
 
     const navLinks = this.props.links.map(link => (
       <li key={link} className="Navbar__item">

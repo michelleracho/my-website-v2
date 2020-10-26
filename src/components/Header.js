@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from './helpers';
 import './Header.scss';
 // import headerBg from '../img/svg/header-bg.svg';
 // import { ReactComponent as SubHeader } from '../img/svg/sub-header.svg';
@@ -24,7 +26,7 @@ class Header extends Component {
 
   // add style to each header-bg svg group
   componentDidMount() {
-    const bgGroup = document.getElementsByClassName('bg-group');
+    // const bgGroup = document.getElementsByClassName('bg-group');
     // console.log(bgGroup);
   }
 
@@ -36,9 +38,9 @@ class Header extends Component {
 
         <h1 className="Header__heading">Michelle Racho</h1>
         <p className="Header__sub-heading">A developer with an appreciation for design</p>
-        <a className="cta" href="#about">
+        <HashLink className="cta" smooth scroll={scrollWithOffset} to="#about">
           Learn more
-        </a>
+        </HashLink>
       </header>
     );
   }

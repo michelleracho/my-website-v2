@@ -11,46 +11,84 @@
   @include flexCenter;
   flex-direction: column;
 
-  // color: $color-black;
-  // background: url(../img/svg/header-bg.svg);
-  // background-size: contain;
-  // background-repeat: no-repeat;
-  // // background-position: top -3rem right;
-  // background-position: top 5rem center;
+  @media only screen and (max-width: $bp-md) {
+    align-items: flex-start;
+  }
 
-  & > *:not(#header-bg) {
+  @media only screen and (max-width: $bp-sm) {
+    border: 1px solid;
+  }
+
+  & > *:not(.header-bg) {
     // border: 1px solid tomato;
     position: relative;
+    top: 15rem;
+
+    @media only screen and (max-width: $bp-md) {
+      top: 10rem;
+    }
   }
 
   &__heading {
-    font-size: 9rem;
+    font-size: 8rem;
     font-weight: 700;
-    transform: translateY(-50%);
-    margin-top: 22%;
+
+    @media only screen and (max-width: $bp-lg) {
+      font-size: 7.1rem;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      font-size: 6rem;
+    }
   }
 
   &__sub-heading {
-    font-size: 3.13rem;
+    font-size: 2.73rem;
     font-weight: 100;
     color: $color-gray;
-    transform: translateY(-120%);
+
+    @media only screen and (max-width: $bp-lg) {
+      font-size: 2.43rem;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+      font-size: 2.23rem;
+    }
+  }
+
+  .cta {
+    margin-top: 3rem;
   }
 }
 
 // -------------------- header-bg svg styles --------------------
-#header-bg {
+.header-bg {
   // border: 1px solid tomato;
   opacity: 0.8;
   position: absolute;
   top: 15%;
+
+  @media only screen and (max-width: $bp-md) {
+    align-self: center;
+    top: unset;
+  }
 }
 
-.bg-group {
-  // fill: red;
-  // transform: scale(1.5);
-  // transform-origin: center;
+#header-bg-md {
+  top: -10%;
+  right: -32rem;
+  transform: rotate(30deg);
 }
+
+// .bg-group {
+//   // fill: red;
+//   // transform: scale(1.5);
+//   // transform-origin: center;
+// }
+
+// g[data-name='group'] {
+//   transform: scale(1.5);
+// }
 
 // -------------------- sub-header svg styles --------------------
 #sub-header {

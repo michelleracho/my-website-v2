@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Switch, Route } from 'react-router-dom';
+import { Element } from 'react-scroll';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
@@ -13,22 +14,24 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Header />
+      <Element name="home">
+        <Header />
+      </Element>
 
       <main>
-        <About />
-        <Skills />
-        <ProjectsContainer />
-        <Contact />
+        <Element name="about">
+          <About />
+        </Element>
+        <Element name="skills">
+          <Skills />
+        </Element>
+        <Element name="projects">
+          <ProjectsContainer />
+        </Element>
+        <Element name="contact">
+          <Contact />
+        </Element>
       </main>
-
-      {/* <Switch>
-        <Route exact path="/" component={Header} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/skills" component={Skills} />
-        <Route exact path="/projects" component={ProjectsContainer} />
-        <Route exact path="/contact" component={Contact} />
-      </Switch> */}
 
       <Footer />
     </div>

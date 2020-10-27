@@ -1,6 +1,16 @@
 @import './variables.scss';
 
 .Contact {
+  padding-bottom: 52rem;
+
+  @media only screen and (max-width: $bp-lg) {
+    padding-bottom: 40rem;
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    padding-bottom: 47rem;
+  }
+
   &__container {
     @include flexCenter;
     flex-direction: column;

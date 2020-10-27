@@ -28,10 +28,14 @@ class Contact extends Component {
     return (
       <section className="Contact" id="contact">
         <h2 className="section-title" data-title="Contact">
-          Contact
+          Get in touch
         </h2>
 
-        <ul className="Contact__list">{displayList(this.props.contact, 'Contact')}</ul>
+        <div className="Contact__container">
+          <p className="Contact__text">Connect with me, say hi and give me feedback!</p>
+
+          <ul className="Contact__list">{displayList(this.props.contact, 'Contact')}</ul>
+        </div>
       </section>
     );
   }

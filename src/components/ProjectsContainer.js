@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import Project from './Project';
 import './ProjectsContainer.scss';
-import placeholderIcon from '../img/svg/icon.svg';
+// import placeholderIcon from '../img/svg/icon.svg';
 import soundAppImg from '../img/projects/sound-app.png';
 import imageGalleryImg from '../img/projects/image-gallery.png';
+import todoListImg from '../img/projects/todo-list.png';
+import portfolioImg from '../img/projects/portfolio.png';
 
 class ProjectsContainer extends Component {
   static defaultProps = {
     projects: [
       {
         title: 'Portfolio Website',
-        img: placeholderIcon,
+        img: portfolioImg,
         description: 'Designed and developed this website to showcase my skills as a developer.',
         tech: ['HTML', 'Scss', 'React', 'React Router', 'Adobe XD'],
         previewUrl: 'https://www.michelleracho.com/',
@@ -18,10 +20,10 @@ class ProjectsContainer extends Component {
       },
       {
         title: 'Todo List',
-        img: placeholderIcon,
+        img: todoListImg,
         description: 'The classic project favorite with the addition of utilizing local storage',
         tech: ['HTML', 'CSS', 'React'],
-        previewUrl: '#',
+        previewUrl: 'https://zen-lamarr-96a4de.netlify.app/',
         sourceUrl: 'https://github.com/michelleracho/react-todo-list'
       },
       {

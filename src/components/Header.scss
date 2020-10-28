@@ -1,7 +1,6 @@
 @import 'variables.scss';
 
 .Header {
-  // border: 1px solid tomato;
   height: 100vh;
   max-width: 1920px;
   width: 100%;
@@ -14,13 +13,12 @@
   @media only screen and (max-width: $bp-md) {
     align-items: flex-start;
   }
-
   @media only screen and (max-width: $bp-sm) {
-    border: 1px solid;
+    align-items: center;
+    text-align: center;
   }
 
   & > *:not(.header-bg) {
-    // border: 1px solid tomato;
     position: relative;
     top: 15rem;
 
@@ -36,9 +34,11 @@
     @media only screen and (max-width: $bp-lg) {
       font-size: 7.1rem;
     }
-
     @media only screen and (max-width: $bp-md) {
       font-size: 6rem;
+    }
+    @media only screen and (max-width: $bp-sm) {
+      font-size: 4.5rem;
     }
   }
 
@@ -50,7 +50,6 @@
     @media only screen and (max-width: $bp-lg) {
       font-size: 2.43rem;
     }
-
     @media only screen and (max-width: $bp-md) {
       font-size: 2.23rem;
     }
@@ -63,7 +62,6 @@
 
 // -------------------- header-bg svg styles --------------------
 .header-bg {
-  // border: 1px solid tomato;
   opacity: 0.8;
   position: absolute;
   top: 15%;
@@ -78,38 +76,4 @@
   top: -10%;
   right: -32rem;
   transform: rotate(30deg);
-}
-
-// .bg-group {
-//   // fill: red;
-//   // transform: scale(1.5);
-//   // transform-origin: center;
-// }
-
-// g[data-name='group'] {
-//   transform: scale(1.5);
-// }
-
-// -------------------- sub-header svg styles --------------------
-#sub-header {
-  height: 3.25rem;
-  width: auto;
-  transform: translateY(-120%);
-}
-
-.path-stroke {
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
-  animation: line-anim 0.2s ease forwards;
-  /* animation: line-anim 0.2s forwards; */
-}
-
-@keyframes line-anim {
-  from {
-    fill: transparent;
-  }
-  to {
-    /* stroke-dashoffset: 0; */
-    fill: #494949;
-  }
 }

@@ -4,6 +4,7 @@
   &__container {
     // border: 2px solid black;
     @include flexCenter;
+    padding: 0 5rem;
 
     @media only screen and (max-width: $bp-lg) {
       flex-direction: column;
@@ -26,7 +27,6 @@
       width: 60%;
       border-radius: 40% 10% / 10% 50%;
     }
-
     @media only screen and (max-width: $bp-md) {
       width: 70%;
     }
@@ -39,14 +39,14 @@
   }
 
   &__description {
-    margin: auto 5rem;
+    margin-left: 5rem;
     width: 100%;
     text-align: justify;
 
     @media only screen and (max-width: $bp-lg) {
       width: 85%;
+      margin-left: 0;
     }
-
     @media only screen and (max-width: $bp-md) {
       width: 100%;
     }

@@ -11,8 +11,12 @@ class Navbar extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { navIcon: 'bars' };
+    this.state = {
+      navIcon: 'bars',
+      darkMode: false
+    };
     this.toggleNav = this.toggleNav.bind(this);
+    this.toggleDarkMode = this.toggleDarkMode.bind(this);
   }
 
   toggleNav() {
@@ -24,9 +28,18 @@ class Navbar extends Component {
       : this.setState({ navIcon: 'bars' });
   }
 
-  render() {
-    const navList = document.querySelector('.Navbar__list');
+  toggleDarkMode() {
+    this.setState({
+      darkMode: !this.state.darkMode
+    });
 
+    const app = document.querySelector('.App');
+    !this.state.darkMode ? app.classList.add('dark-mode') : app.classList.remove('dark-mode');
+
+    console.log(`in toggle: ${this.state.darkMode}`);
+  }
+
+  render() {
     const navLinks = this.props.links.map(link => (
       <li key={link} className="Navbar__item">
         <Link
@@ -68,7 +81,9 @@ class Navbar extends Component {
 
         <ul className="Navbar__list">
           {navLinks}
-          <button className="btn-dark-mode">DARK</button>
+          <button className="btn-dark-mode" onClick={this.toggleDarkMode}>
+            DARK
+          </button>
         </ul>
       </nav>
     );

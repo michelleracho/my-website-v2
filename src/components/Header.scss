@@ -37,7 +37,7 @@
     @media only screen and (max-width: $bp-md) {
       font-size: 6rem;
     }
-    @media only screen and (max-width: $bp-sm) {
+    @media only screen and (max-width: $bp-xs) {
       font-size: 4.5rem;
     }
   }
@@ -53,6 +53,9 @@
     @media only screen and (max-width: $bp-md) {
       font-size: 2.23rem;
     }
+    @media only screen and (max-width: $bp-xs) {
+      font-size: 2rem;
+    }
   }
 
   .cta {
@@ -62,7 +65,7 @@
 
 // -------------------- header-bg svg styles --------------------
 .header-bg {
-  opacity: 0.8;
+  opacity: 0.65;
   position: absolute;
   top: 15%;
 

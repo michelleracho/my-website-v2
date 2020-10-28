@@ -8,6 +8,7 @@
   font-size: 1.6rem;
   background-color: $color-white;
   color: $color-black;
+  transition: background-color 0.2s, color 0.2s;
 
   @media only screen and (max-width: $bp-lg) {
     padding: 0 5rem;

@@ -3,6 +3,8 @@ import { Link } from 'react-scroll';
 import './Navbar.scss';
 import logo from '../img/svg/logo.svg';
 import logoLg from '../img/svg/logo-lg.svg';
+import { ReactComponent as Sun } from '../img/svg/sun.svg';
+import { ReactComponent as Moon } from '../img/svg/moon.svg';
 
 class Navbar extends Component {
   static defaultProps = {
@@ -13,8 +15,10 @@ class Navbar extends Component {
     super(props);
     this.state = {
       navIcon: 'bars',
-      darkMode: false
+      darkMode: false,
+      darkModeIcon: <Sun ref={this.svgRef} />
     };
+    this.svgRef = React.createRef();
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleDarkMode = this.toggleDarkMode.bind(this);
   }
@@ -29,14 +33,16 @@ class Navbar extends Component {
   }
 
   toggleDarkMode() {
-    this.setState({
-      darkMode: !this.state.darkMode
-    });
-
     const app = document.querySelector('.App');
-    !this.state.darkMode ? app.classList.add('dark-mode') : app.classList.remove('dark-mode');
+    this.setState({ darkMode: !this.state.darkMode });
 
-    console.log(`in toggle: ${this.state.darkMode}`);
+    if (!this.state.darkMode) {
+      app.classList.add('dark-mode');
+      this.setState({ darkModeIcon: <Moon ref={this.svgRef} /> });
+    } else {
+      app.classList.remove('dark-mode');
+      this.setState({ darkModeIcon: <Sun ref={this.svgRef} /> });
+    }
   }
 
   render() {
@@ -69,7 +75,7 @@ class Navbar extends Component {
           duration={1000}
         >
           <picture className="Navbar__logo-container">
-            <source srcSet={logo} media="(max-width: 425px)" />
+            <source srcSet={logo} media="(max-width: 600px)" />
             <img className="Navbar__logo" src={logoLg} alt="logo" />
           </picture>
         </Link>
@@ -82,7 +88,7 @@ class Navbar extends Component {
         <ul className="Navbar__list">
           {navLinks}
           <button className="btn-dark-mode" onClick={this.toggleDarkMode}>
-            DARK
+            {this.state.darkModeIcon}
           </button>
         </ul>
       </nav>

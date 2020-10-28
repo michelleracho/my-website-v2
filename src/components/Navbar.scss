@@ -34,9 +34,12 @@
   }
 
   &__logo-container {
-    width: 15rem;
+    width: 12rem;
     height: auto;
 
+    @media only screen and (max-width: $bp-md) {
+      width: 10rem;
+    }
     @media only screen and (max-width: $bp-sm) {
       width: 5rem;
     }
@@ -117,6 +120,10 @@
 
 .active-section {
   color: $color-primary;
+
+  @media only screen and (max-width: $bp-sm) {
+    color: unset;
+  }
 }
 
 .btn-dark-mode {

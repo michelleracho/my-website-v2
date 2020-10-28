@@ -11,12 +11,17 @@ class Navbar extends Component {
 
   constructor(props) {
     super(props);
+    this.state = { navIcon: 'bars' };
     this.toggleNav = this.toggleNav.bind(this);
   }
 
   toggleNav() {
     const navList = document.querySelector('.Navbar__list');
     navList.classList.toggle('active');
+
+    navList.classList.contains('active')
+      ? this.setState({ navIcon: 'times' })
+      : this.setState({ navIcon: 'bars' });
   }
 
   render() {
@@ -32,6 +37,7 @@ class Navbar extends Component {
           spy={true}
           smooth={true}
           duration={1000}
+          onClick={this.toggleNav}
         >
           {link}
         </Link>
@@ -57,7 +63,7 @@ class Navbar extends Component {
 
         {/* for hamburger */}
         <button className="toggle-nav" onClick={this.toggleNav}>
-          <i className="fas fa-bars"></i>
+          <i className={`fas fa-${this.state.navIcon}`}></i>
         </button>
 
         <ul className="Navbar__list">

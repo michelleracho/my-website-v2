@@ -38,7 +38,7 @@ class About extends Component {
             </p>
 
             <a className="cta" href={resume} target="_blank" rel="noopener noreferrer">
-              Resume
+              View Resume
             </a>
           </div>
         </div>

@@ -20,10 +20,10 @@
 
   & > *:not(.header-bg) {
     position: relative;
-    top: 15rem;
+    bottom: -15%;
 
     @media only screen and (max-width: $bp-md) {
-      top: 10rem;
+      bottom: -10%;
     }
   }
 
@@ -67,7 +67,7 @@
 .header-bg {
   opacity: 0.65;
   position: absolute;
-  top: 15%;
+  bottom: 37%;
 
   @media only screen and (max-width: $bp-md) {
     align-self: center;

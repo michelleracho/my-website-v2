@@ -25,9 +25,6 @@ main {
 
   & > * {
     grid-column: 2/3;
-    // margin: auto 15%;
-    // padding-left: 5rem;
-    // border: 0.5rem solid $color-primary;
   }
 }
 
@@ -41,8 +38,7 @@ section {
   margin-bottom: 5rem;
   position: relative;
   text-align: left;
-  // display: inline-block;
-  width: 100%; // 14.5rem;
+  width: 100%;
 
   @media only screen and (max-width: $bp-lg) {
     font-size: 3.3rem;
@@ -51,15 +47,18 @@ section {
     text-align: center;
   }
 
+  &::before,
+  &::after {
+    position: absolute;
+    pointer-events: none;
+  }
+
   &::before {
     content: '';
-    position: absolute;
     width: 30rem;
     height: 20rem;
-    background: url(./img/text-bg.png);
+    background: no-repeat center url(./img/text-bg.png);
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     left: -3rem;
     top: -130%;
     opacity: 0.4;
@@ -73,7 +72,6 @@ section {
 
   &::after {
     content: attr(data-title);
-    position: absolute;
     top: 0;
     right: 0;
     opacity: 0.04;
@@ -88,12 +86,7 @@ section {
       letter-spacing: 0;
     }
     @media only screen and (max-width: $bp-sm) {
-      // font-size: 10rem;
-      // right: unset;
-      // left: 50%;
-      // bottom: -100%;
-      // transform: translateX(-50%);
-      opacity: 0;
+      display: none;
     }
   }
 }
@@ -141,4 +134,9 @@ section {
   &:active {
     transform: scale(0.9);
   }
+}
+
+::selection {
+  background-color: rgba($color-primary-dark, 0.5);
+  color: $color-white;
 }

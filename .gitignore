@@ -25,4 +25,7 @@ yarn-error.log*
 
 # temp files/folders
 /src/design
-/src/img
+/src/img/not-used
+/src/img/
+Michelle Racho Resume.pdf
+

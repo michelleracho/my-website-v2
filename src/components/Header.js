@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { scrollWithOffset } from './helpers';
-import './Header.scss';
 import { ReactComponent as HeaderBgLg } from '../img/svg/header-bg-lg.svg';
 import { ReactComponent as HeaderBgMd } from '../img/svg/header-bg-md.svg';
+import './Header.scss';
 
 class Header extends Component {
   constructor(props) {

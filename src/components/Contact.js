@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { displayList } from './helpers';
+import { ReactComponent as ContactBg } from '../img/svg/contact-bg.svg';
 import './Contact.scss';
 
 class Contact extends Component {
@@ -36,6 +37,8 @@ class Contact extends Component {
 
           <ul className="Contact__list">{displayList(this.props.contact, 'Contact')}</ul>
         </div>
+
+        <ContactBg />
       </section>
     );
   }

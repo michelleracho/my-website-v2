@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './About.scss';
 import photoSquare from '../img/mracho-square.png';
 import photoRectangle from '../img/mracho-rectangle.jpg';
+import resume from '../Michelle Racho Resume.pdf';
 
 class About extends Component {
   render() {
@@ -36,7 +37,7 @@ class About extends Component {
               make these dreams a reality.
             </p>
 
-            <a href="#" className="cta">
+            <a className="cta" href={resume} target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </div>

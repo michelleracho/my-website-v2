@@ -15,12 +15,20 @@ class Navbar extends Component {
     super(props);
     this.state = {
       navIcon: 'bars',
-      darkMode: false,
+      // darkMode: false,
+      darkMode: JSON.parse(window.localStorage.getItem('darkMode') || 'false'),
       darkModeIcon: <Sun ref={this.svgRef} />
     };
     this.svgRef = React.createRef();
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleDarkMode = this.toggleDarkMode.bind(this);
+  }
+
+  componentDidMount() {
+    const app = document.querySelector('.App');
+    if (this.state.darkMode) {
+      app.classList.add('dark-mode');
+    }
   }
 
   toggleNav() {
@@ -34,7 +42,12 @@ class Navbar extends Component {
 
   toggleDarkMode() {
     const app = document.querySelector('.App');
-    this.setState({ darkMode: !this.state.darkMode });
+    this.setState(
+      {
+        darkMode: !this.state.darkMode
+      },
+      () => window.localStorage.setItem('darkMode', JSON.stringify(this.state.darkMode))
+    );
 
     if (!this.state.darkMode) {
       app.classList.add('dark-mode');

@@ -15,7 +15,6 @@ class Navbar extends Component {
     super(props);
     this.state = {
       navIcon: 'bars',
-      // darkMode: false,
       darkMode: JSON.parse(window.localStorage.getItem('darkMode') || 'false'),
       darkModeIcon: <Sun ref={this.svgRef} />
     };
@@ -28,9 +27,11 @@ class Navbar extends Component {
     const app = document.querySelector('.App');
     if (this.state.darkMode) {
       app.classList.add('dark-mode');
+      this.setState({ darkModeIcon: <Moon ref={this.svgRef} /> });
     }
   }
 
+  // for small screens
   toggleNav() {
     const navList = document.querySelector('.Navbar__list');
     navList.classList.toggle('active');
@@ -41,7 +42,6 @@ class Navbar extends Component {
   }
 
   toggleDarkMode() {
-    const app = document.querySelector('.App');
     this.setState(
       {
         darkMode: !this.state.darkMode
@@ -49,6 +49,11 @@ class Navbar extends Component {
       () => window.localStorage.setItem('darkMode', JSON.stringify(this.state.darkMode))
     );
 
+    this.setDarkModeIcon();
+  }
+
+  setDarkModeIcon() {
+    const app = document.querySelector('.App');
     if (!this.state.darkMode) {
       app.classList.add('dark-mode');
       this.setState({ darkModeIcon: <Moon ref={this.svgRef} /> });

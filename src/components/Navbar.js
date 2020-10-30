@@ -105,9 +105,15 @@ class Navbar extends Component {
 
         <ul className="Navbar__list">
           {navLinks}
-          <button className="btn-dark-mode" onClick={this.toggleDarkMode}>
-            {this.state.darkModeIcon}
-          </button>
+          <li>
+            <button
+              className="btn-dark-mode"
+              onClick={this.toggleDarkMode}
+              aria-label="Toggle Dark Mode"
+            >
+              {this.state.darkModeIcon}
+            </button>
+          </li>
         </ul>
       </nav>
     );

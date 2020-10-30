@@ -33,7 +33,7 @@ class Header extends Component {
         {headerBg}
 
         <h1 className="Header__heading">Michelle Racho</h1>
-        <h3 className="Header__sub-heading">A developer with an appreciation for design</h3>
+        <p className="Header__sub-heading">A developer with an appreciation for design</p>
 
         <HashLink className="cta" smooth scroll={scrollWithOffset} to="#about">
           Learn more

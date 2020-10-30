@@ -19,6 +19,7 @@ class Navbar extends Component {
       darkModeIcon: <Sun ref={this.svgRef} />
     };
     this.svgRef = React.createRef();
+    this.overlayRef = React.createRef();
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleDarkMode = this.toggleDarkMode.bind(this);
   }
@@ -39,6 +40,10 @@ class Navbar extends Component {
     navList.classList.contains('active')
       ? this.setState({ navIcon: 'times' })
       : this.setState({ navIcon: 'bars' });
+
+    // toggle overlay
+    const overlay = this.overlayRef.current;
+    overlay.classList.toggle('overlayActive');
   }
 
   toggleDarkMode() {
@@ -82,40 +87,44 @@ class Navbar extends Component {
     ));
 
     return (
-      <nav className="Navbar">
-        <Link
-          activeClass="active-section"
-          className="Navbar__logo-link"
-          to="home"
-          offset={-150}
-          spy={true}
-          smooth={true}
-          duration={1000}
-        >
-          <picture className="Navbar__logo-container">
-            <source srcSet={logo} media="(max-width: 600px)" />
-            <img className="Navbar__logo" src={logoLg} alt="logo" />
-          </picture>
-        </Link>
+      <div>
+        <div ref={this.overlayRef} className="Overlay" onClick={this.toggleNav}></div>
 
-        {/* for hamburger */}
-        <button className="toggle-nav" onClick={this.toggleNav}>
-          <i className={`fas fa-${this.state.navIcon}`}></i>
-        </button>
+        <nav className="Navbar">
+          <Link
+            activeClass="active-section"
+            className="Navbar__logo-link"
+            to="home"
+            offset={-150}
+            spy={true}
+            smooth={true}
+            duration={1000}
+          >
+            <picture className="Navbar__logo-container">
+              <source srcSet={logo} media="(max-width: 600px)" />
+              <img className="Navbar__logo" src={logoLg} alt="logo" />
+            </picture>
+          </Link>
 
-        <ul className="Navbar__list">
-          {navLinks}
-          <li>
-            <button
-              className="btn-dark-mode"
-              onClick={this.toggleDarkMode}
-              aria-label="Toggle Dark Mode"
-            >
-              {this.state.darkModeIcon}
-            </button>
-          </li>
-        </ul>
-      </nav>
+          {/* for hamburger */}
+          <button className="toggle-nav" onClick={this.toggleNav}>
+            <i className={`fas fa-${this.state.navIcon}`}></i>
+          </button>
+
+          <ul className="Navbar__list">
+            {navLinks}
+            <li>
+              <button
+                className="btn-dark-mode"
+                onClick={this.toggleDarkMode}
+                aria-label="Toggle Dark Mode"
+              >
+                {this.state.darkModeIcon}
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     );
   }
 }

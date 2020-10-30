@@ -126,6 +126,7 @@
   }
 }
 
+// hamburger
 .toggle-nav {
   cursor: pointer;
   position: absolute;
@@ -151,6 +152,23 @@
   transform: scaleY(1);
 }
 
+// overlay
+.Overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+
+.overlayActive {
+  display: block;
+}
+
+// dark mode
 .btn-dark-mode {
   cursor: pointer;
   background-color: transparent;

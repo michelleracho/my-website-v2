@@ -6,6 +6,8 @@ import logoLg from '../img/svg/logo-lg.svg';
 import { ReactComponent as Sun } from '../img/svg/sun.svg';
 import { ReactComponent as Moon } from '../img/svg/moon.svg';
 
+const maxWidth = '600px';
+
 class Navbar extends Component {
   static defaultProps = {
     links: ['About', 'Skills', 'Projects', 'Contact']
@@ -16,7 +18,8 @@ class Navbar extends Component {
     this.state = {
       navIcon: 'bars',
       darkMode: JSON.parse(window.localStorage.getItem('darkMode') || 'false'),
-      darkModeIcon: <Sun ref={this.svgRef} />
+      darkModeIcon: <Sun ref={this.svgRef} />,
+      matches: window.matchMedia(`(max-width: ${maxWidth})`).matches
     };
     this.svgRef = React.createRef();
     this.overlayRef = React.createRef();
@@ -30,20 +33,39 @@ class Navbar extends Component {
       app.classList.add('dark-mode');
       this.setState({ darkModeIcon: <Moon ref={this.svgRef} /> });
     }
+
+    const handler = e => this.setState({ matches: e.matches });
+    window.matchMedia(`(max-width: ${maxWidth})`).addListener(handler);
+  }
+
+  componentDidUpdate() {
+    const navList = document.querySelector('.Navbar__list');
+    const overlay = this.overlayRef.current;
+
+    // handle overlay issue when resizing screen
+    if (this.state.matches === false && overlay.classList.contains('overlayActive')) {
+      overlay.classList.remove('overlayActive');
+    }
+
+    if (this.state.matches && navList.classList.contains('active')) {
+      overlay.classList.add('overlayActive');
+    }
   }
 
   // for small screens
   toggleNav() {
     const navList = document.querySelector('.Navbar__list');
-    navList.classList.toggle('active');
+    const overlay = this.overlayRef.current;
+
+    // only toggle hamburger and overlay if screensize = maxWidth
+    if (this.state.matches) {
+      navList.classList.toggle('active');
+      overlay.classList.toggle('overlayActive');
+    }
 
     navList.classList.contains('active')
       ? this.setState({ navIcon: 'times' })
       : this.setState({ navIcon: 'bars' });
-
-    // toggle overlay
-    const overlay = this.overlayRef.current;
-    overlay.classList.toggle('overlayActive');
   }
 
   toggleDarkMode() {
@@ -101,7 +123,7 @@ class Navbar extends Component {
             duration={1000}
           >
             <picture className="Navbar__logo-container">
-              <source srcSet={logo} media="(max-width: 600px)" />
+              <source srcSet={logo} media={`(max-width: ${maxWidth})`} />
               <img className="Navbar__logo" src={logoLg} alt="logo" />
             </picture>
           </Link>

@@ -21,7 +21,12 @@ class Project extends Component {
             <a href={previewUrl} target="_blank" rel="noopener noreferrer" className="cta">
               See Live
             </a>
-            <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="cta">
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta cta-secondary"
+            >
               Source Code
             </a>
           </div>

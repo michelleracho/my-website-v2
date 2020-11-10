@@ -19,7 +19,7 @@ class Skills extends Component {
       { label: 'VS Code', icon: 'devicon-visualstudio-plain' },
       // { label: 'Visual Studio', icon: 'devicon-visualstudio-plain' },
       { label: 'Git', icon: 'fab fa-git-alt' },
-      { label: 'Github', icon: 'fab fa-github' },
+      { label: 'GitHub', icon: 'fab fa-github' },
       { label: 'NPM', icon: 'fab fa-npm' },
       { label: 'Adobe XD', icon: 'fab fa-adobe' },
       { label: 'Figma', icon: 'fab fa-figma' }

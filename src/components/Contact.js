@@ -11,7 +11,7 @@ class Contact extends Component {
         link: 'mailto:michelleangela.racho@gmail.com',
         icon: 'fas fa-envelope-square'
       },
-      { label: 'Github', link: 'https://github.com/michelleracho', icon: 'fab fa-github' },
+      { label: 'GitHub', link: 'https://github.com/michelleracho', icon: 'fab fa-github' },
       {
         label: 'LinkedIn',
         link: 'https://www.linkedin.com/in/michelle-angela-racho/',

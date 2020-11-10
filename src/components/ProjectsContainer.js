@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Project from './Project';
 import './ProjectsContainer.scss';
-// import placeholderIcon from '../img/svg/icon.svg';
+
 import soundAppImg from '../img/projects/sound-app.png';
 import imageGalleryImg from '../img/projects/image-gallery.png';
 import todoListImg from '../img/projects/todo-list.png';
 import portfolioImg from '../img/projects/portfolio.png';
 import spacexImg from '../img/projects/spacex-explorer.png';
+import krTypingImg from '../img/projects/kr-typing.png';
 
 class ProjectsContainer extends Component {
   static defaultProps = {
@@ -14,7 +15,7 @@ class ProjectsContainer extends Component {
       {
         title: 'Portfolio Website',
         img: portfolioImg,
-        description: 'Designed and developed this website to showcase my skills as a developer.',
+        description: 'Designed and developed this website to showcase my skills as a developer',
         tech: ['HTML', 'Scss', 'React', 'Adobe XD'],
         previewUrl: 'https://www.michelleracho.com/',
         sourceUrl: 'https://github.com/michelleracho/my-website-v2'
@@ -22,7 +23,7 @@ class ProjectsContainer extends Component {
       {
         title: 'SpaceX Explorer',
         img: spacexImg,
-        description: 'Log in to see space launches data from the SpaceX API.',
+        description: 'Log in to see space launches data from the SpaceX API',
         tech: ['HTML', 'React', 'Styled Components', 'Figma'],
         previewUrl: 'https://mracho-spacex-explorer.netlify.app/',
         sourceUrl: 'https://github.com/michelleracho/react-spacex-explorer'
@@ -34,6 +35,15 @@ class ProjectsContainer extends Component {
         tech: ['HTML', 'CSS', 'React'],
         previewUrl: 'https://mracho-todo-list.netlify.app/',
         sourceUrl: 'https://github.com/michelleracho/react-todo-list'
+      },
+      {
+        title: 'KR Typing Game',
+        img: krTypingImg,
+        description:
+          'Get familiar with the Korean keyboard layout while learning some Korean vocabulary',
+        tech: ['HTML', 'SCSS', 'JavaScript'],
+        previewUrl: 'https://mracho-kr-typing.netlify.app/',
+        sourceUrl: 'https://github.com/michelleracho/typing-game'
       },
       {
         title: 'Sound App',

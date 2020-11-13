@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './About.scss';
-import photoSquare from '../img/mracho-square.png';
-import photoRectangle from '../img/mracho-rectangle.jpg';
+import photo from '../img/mracho.png';
 import resume from '../Michelle Racho Resume.pdf';
 
 class About extends Component {
@@ -14,8 +13,7 @@ class About extends Component {
 
         <div className="About__container">
           <picture className="About__photo-container">
-            <source srcSet={photoRectangle} media="(max-width: 1100px)" />
-            <img className="About__photo" src={photoSquare} alt="" />
+            <img className="About__photo" src={photo} alt="" />
           </picture>
 
           <div className="About__description">

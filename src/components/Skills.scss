@@ -2,7 +2,6 @@
 
 .Skills {
   &__container {
-    // padding-bottom: 3.5rem;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr, auto;
@@ -39,6 +38,12 @@
 
     @include flexCenter;
     flex-wrap: wrap;
+
+    &:nth-child(2) {
+      @media only screen and (max-width: $bp-md) {
+        margin-bottom: 2rem;
+      }
+    }
   }
 
   &__item {

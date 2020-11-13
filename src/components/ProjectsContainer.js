@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Project from './Project';
 import './ProjectsContainer.scss';
 
-import soundAppImg from '../img/projects/sound-app.png';
-import imageGalleryImg from '../img/projects/image-gallery.png';
-import todoListImg from '../img/projects/todo-list.png';
 import portfolioImg from '../img/projects/portfolio.png';
 import spacexImg from '../img/projects/spacex-explorer.png';
 import krTypingImg from '../img/projects/kr-typing.png';
@@ -29,37 +26,12 @@ class ProjectsContainer extends Component {
         sourceUrl: 'https://github.com/michelleracho/react-spacex-explorer'
       },
       {
-        title: 'Todo List',
-        img: todoListImg,
-        description: 'The classic project favorite with the addition of utilizing local storage',
-        tech: ['HTML', 'CSS', 'React'],
-        previewUrl: 'https://mracho-todo-list.netlify.app/',
-        sourceUrl: 'https://github.com/michelleracho/react-todo-list'
-      },
-      {
         title: 'KR Typing Game',
         img: krTypingImg,
-        description:
-          'Get familiar with the Korean keyboard layout while learning some Korean vocabulary',
+        description: 'Get familiar with the Korean keyboard layout while learning some vocabulary',
         tech: ['HTML', 'SCSS', 'JavaScript'],
         previewUrl: 'https://mracho-kr-typing.netlify.app/',
         sourceUrl: 'https://github.com/michelleracho/typing-game'
-      },
-      {
-        title: 'Sound App',
-        img: soundAppImg,
-        description: 'A Patatap clone using JavaScript libraries',
-        tech: ['HTML', 'CSS', 'JavaScript', 'Paper.js', 'Howler.js'],
-        previewUrl: 'https://mracho-sound-app.netlify.app/',
-        sourceUrl: 'https://github.com/michelleracho/sound-app'
-      },
-      {
-        title: 'Image Gallery',
-        img: imageGalleryImg,
-        description: 'Instagram profile page clone using CSS grid',
-        tech: ['HTML', 'Scss'],
-        previewUrl: 'https://mracho-image-gallery.netlify.app/',
-        sourceUrl: 'https://github.com/michelleracho/image-gallery'
       }
     ]
   };

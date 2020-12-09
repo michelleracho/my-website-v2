@@ -11,10 +11,14 @@ class Contact extends Component {
         link: 'mailto:michelleangela.racho@gmail.com',
         icon: 'fas fa-envelope-square'
       },
-      { label: 'GitHub', link: 'https://github.com/michelleracho', icon: 'fab fa-github' },
+      {
+        label: 'GitHub',
+        link: 'https://github.com/michelleracho',
+        icon: 'fab fa-github'
+      },
       {
         label: 'LinkedIn',
-        link: 'https://www.linkedin.com/in/michelle-angela-racho/',
+        link: 'https://www.linkedin.com/in/michelleracho/',
         icon: 'fab fa-linkedin'
       },
       {
@@ -33,9 +37,13 @@ class Contact extends Component {
         </h2>
 
         <div className="Contact__container">
-          <p className="Contact__text">Connect with me, say hi and give me feedback!</p>
+          <p className="Contact__text">
+            Connect with me, say hi and give me feedback!
+          </p>
 
-          <ul className="Contact__list">{displayList(this.props.contact, 'Contact')}</ul>
+          <ul className="Contact__list">
+            {displayList(this.props.contact, 'Contact')}
+          </ul>
         </div>
 
         <ContactBg />
